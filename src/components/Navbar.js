@@ -2,8 +2,44 @@ import React from 'react'
 import '../stylesheets/navbar.css';
 import { Link } from 'react-router-dom';
 import { TextField } from '@material-ui/core';
+
 import { Button } from '@material-ui/core';
 export default function Navbar() {
+
+  
+  const currentUser = sessionStorage.getItem('user');
+
+  const logout = () => {
+      sessionStorage.removeItem('user');
+      window.location.replace('/login');
+  }
+  const showLoggedIn = () => {
+
+    if (currentUser) {
+        return <>
+            
+        <li className="nav-item">
+          <Link className="nav-link active"  to='/home'>Home</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to='/AddVlogs' >add Vlogs</Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to='/viewVlogs' >view  Vlogs</Link>
+        </li>
+       
+        </>
+    } else {
+        return <>
+          
+        <li className="nav-item">
+          <Link className="nav-link" to='/signup' >Signup/Signin</Link>
+        </li>
+           
+
+        </>
+    }
+}
     return (
         <div className="abc">
             <div className="b-example-divider"></div>
@@ -14,7 +50,7 @@ export default function Navbar() {
       <svg className="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlinkHref="#bootstrap"/></svg>
     </a>
 
-    <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
     <li className="nav-item">
           <Link className="nav-link active"   to='/home'>Home</Link>
         </li>
@@ -28,7 +64,10 @@ export default function Navbar() {
         <li className="nav-item">
           <Link className="nav-link" to='/AddVlogs' >Add Vlogs</Link>
         </li>
-    </ul>
+        <li className="nav-item">
+          <Link className="nav-link" to='/viewVlogs' >view Vlogs</Link>
+        </li>
+    </ul> 
 
     <div className="col-md-3 text-end">
     <form  noValidate autoComplete="off">
@@ -53,7 +92,7 @@ export default function Navbar() {
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         
         <li className="nav-item">
-          <Link className="nav-link active"  to='/'>Lifestylingvlogging</Link>
+          <Link className="nav-link active"  to='/lifestyle'>Lifestylingvlogging</Link>
         </li>
         
        

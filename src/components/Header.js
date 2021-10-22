@@ -2,7 +2,45 @@ import React from 'react'
 import { BrowserRouter, Link } from "react-router-dom";
 import '../stylesheets/header.css';
 export default function Header() {
+
+
+  
+//   const currentUser = sessionStorage.getItem('user');
+
+//   const logout = () => {
+//       sessionStorage.removeItem('user');
+//       window.location.replace('/login');
+//   }
+//   const showLoggedIn = () => {
+
+//     if (currentUser) {
+//         return <>
+            
+//         <li className="nav-item">
+//           <Link className="nav-link active"  to='/home'>Home</Link>
+//         </li>
+//         <li className="nav-item">
+//           <Link className="nav-link" to='/AddVlogs' >add Vlogs</Link>
+//         </li>
+//         <li className="nav-item">
+//           <Link className="nav-link" to='/viewVlogs' >view  Vlogs</Link>
+//         </li>
+//         </>
+//     } else {
+//         return <>
+          
+//         <li className="nav-item">
+//           <Link className="nav-link" to='/signup' >Signup/Signin</Link>
+//         </li>
+           
+
+//         </>
+//     }
+// }
+
     return (
+
+
       
         <div className="yui">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -13,20 +51,7 @@ export default function Header() {
     </button>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        
-        <li className="nav-item">
-          <Link className="nav-link active"  to='/home'>Home</Link>
-        </li>
-        
-       
-       
-        <li className="nav-item">
-          <Link className="nav-link" to='/signup' >Signup/Signin</Link>
-        </li>
-
-        <li className="nav-item">
-          <Link className="nav-link" to='/AddVlogs' >add Vlogs</Link>
-        </li>
+      
        
         
       </ul>

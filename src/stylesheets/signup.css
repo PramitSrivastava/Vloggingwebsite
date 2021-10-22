@@ -4,6 +4,13 @@
 	background:#c8c8c8;
 	font:600 16px/18px 'Open Sans',sans-serif;
 } */
+.jbn{
+	background-color: rgb(255, 145, 0);
+}
+.vbn{
+	margin-left: 35%;
+	width: 40%;
+}
 *,:after,:before{box-sizing:border-box}
 .clearfix:after,.clearfix:before{content:'';display:table}
 .clearfix:after{clear:both;display:block}

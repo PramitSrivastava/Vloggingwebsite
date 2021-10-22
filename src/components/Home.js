@@ -8,7 +8,8 @@ import Picture from './Picture';
 import Sample from './Sample';
 import Dark from './Dark';
 import viewVlogs from './viewVlogs';
-
+import mode from './mode';
+import lifestyle from './lifestyle';
 
 // let theme = createTheme();
 // theme = responsiveFontSizes(theme);
@@ -17,15 +18,15 @@ import viewVlogs from './viewVlogs';
 
 export default function home() {
     return (
-        <div >
+        <div className="klj" >
+         
             <Matter></Matter>
             <Picture></Picture>
             <Sample></Sample>
            <Dark></Dark>
-         
-           {/* <ThemeProvider theme={theme}>
-  <Typography variant="h1">Responsive </Typography>
-</ThemeProvider> */}
+      <mode></mode>
+          
+
         </div>
     )
 }

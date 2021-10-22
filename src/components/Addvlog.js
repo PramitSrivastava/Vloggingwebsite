@@ -5,6 +5,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import app_config from "../config";
 import Swal from "sweetalert2";
 import { useState } from "react";
+import '../stylesheets/addvlogs.css';
 
 const AddVlog = () => {
 
@@ -85,6 +86,8 @@ const AddVlog = () => {
 
 
     return (
+        <div className="vcx">
+            <h1 className="fgh">Add your vlogs here </h1>
         <div className="container mt-5">
             <div className="row">
                 <div className="col-md-6"></div>
@@ -92,7 +95,7 @@ const AddVlog = () => {
                     <div className="card">
                         <div className="card-body">
 
-                            <h2>Add Video</h2>
+                            <h2>Add Vlogs</h2>
                             <hr />
 
                             <Formik
@@ -138,6 +141,7 @@ const AddVlog = () => {
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
